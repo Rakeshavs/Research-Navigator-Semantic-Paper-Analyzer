@@ -432,7 +432,7 @@ def generate_answer(prompt):
 if "chat_history" not in st.session_state:
     st.session_state.chat_history = []
 
-user_message = st.text_input("💬 Ask your question or type 'summary' / 'short notes':")
+user_message = st.text_input("Ask your question or type 'summary' / 'short notes':")
 
 if user_message:
     st.session_state.chat_history.append(("user", user_message))
@@ -470,3 +470,4 @@ if "last_retrieved" in st.session_state and st.session_state.last_retrieved:
             st.write(chunk)
 else:
     st.info("No retrieved chunks yet.")
+
