@@ -1,3 +1,5 @@
+import os
+os.environ["SENTENCE_TRANSFORMERS_NO_TF"] = "1"
 # research_navigator_streamlit.py
 import streamlit as st
 import spacy
@@ -470,4 +472,5 @@ if "last_retrieved" in st.session_state and st.session_state.last_retrieved:
             st.write(chunk)
 else:
     st.info("No retrieved chunks yet.")
+
 
