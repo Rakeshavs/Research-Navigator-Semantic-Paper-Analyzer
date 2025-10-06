@@ -153,7 +153,7 @@ with st.sidebar:
     doc_titles = []
 
     if input_mode == "Paste paragraph":
-        user_text = st.text_area("Paste your paragraph(s) here:", height=250)
+        user_text = st.text_area("Paste your paragraph(s) here:and then contril + enter", height=250)
         if user_text and user_text.strip():
             docs = [user_text.strip()]
             doc_titles = ["User Paragraph"]
@@ -472,5 +472,6 @@ if "last_retrieved" in st.session_state and st.session_state.last_retrieved:
             st.write(chunk)
 else:
     st.info("No retrieved chunks yet.")
+
 
 
